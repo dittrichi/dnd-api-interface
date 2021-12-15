@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./styled";
 
-const ProficiencyItem = ({ index, name, url}) => {
+const RaceDetailItem = ({ index, name, url}) => {
   return (
     <S.Wrapper>
       <S.WrapperTitle>{index}</S.WrapperTitle>      
@@ -12,4 +12,4 @@ const ProficiencyItem = ({ index, name, url}) => {
   );
 };
 
-export default ProficiencyItem;
+export default RaceDetailItem;

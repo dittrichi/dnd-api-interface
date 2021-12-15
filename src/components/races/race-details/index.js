@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import useDnd from "../../hooks/dnd-hooks";
-import ProficiencyItem from "../proficiency-item";
+import useDnd from "../../../hooks/dnd-hooks";
+import RaceDetailItem from "../race-detail-item";
 import * as S from "./styled";
 
-const Proficiencies = () => {
+const RaceDetails = () => {
   const { dndState, getRaceProficiencies, getRaceTraits  } = useDnd();
   const [hasRaceForSearchProf, setHasRaceForSearchProf] = useState(false);
 
@@ -31,7 +31,7 @@ const Proficiencies = () => {
           <S.WrapperTabPanel>
             <S.WrapperList>
               {dndState.proficiencies.map((item) => (
-                <ProficiencyItem
+                <RaceDetailItem
                   index={item.index}
                   name={item.name}
                   url={item.url}
@@ -42,7 +42,7 @@ const Proficiencies = () => {
           <S.WrapperTabPanel>
             <S.WrapperList>
               {dndState.traits.map((item) => (
-                <ProficiencyItem
+                <RaceDetailItem
                   index={item.index}
                   name={item.name}
                   url={item.url}
@@ -58,4 +58,4 @@ const Proficiencies = () => {
   );
 };
 
-export default Proficiencies;
+export default RaceDetails;

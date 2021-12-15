@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import * as S from "./styled";
-import useDnd from "../../hooks/dnd-hooks";
-import RaceSelect from "../races-select"
+import useDnd from "../../../hooks/dnd-hooks";
+import RaceSelect from "../race-select"
 
 const Header = () => {
   const { getRace } = useDnd();
@@ -17,11 +17,6 @@ const Header = () => {
     <header>    
         <S.Wrapper>
           <RaceSelect onChange={(event) => setRaceForSearch(event.currentTarget.value)}/>
-          <input
-            type="text"
-            placeholder="Insert a race"
-            onChange={(event) => setRaceForSearch(event.target.value)}
-          />
           <button type="submit" onClick={submitGetRace}>
             <span>Search</span>
           </button>

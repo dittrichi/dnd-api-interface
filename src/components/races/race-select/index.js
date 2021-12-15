@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import useDnd from "../../hooks/dnd-hooks";
+import useDnd from "../../../hooks/dnd-hooks";
 
 
 import * as S from "./styled";
