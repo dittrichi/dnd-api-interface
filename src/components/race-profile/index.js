@@ -21,7 +21,7 @@ const RaceProfile = () => {
           </S.WrapperRaceGeneric>
 
           <S.WrapperRaceGeneric>
-            <h3>ability_bonuses:</h3>
+            <h3>Ability bonuses:</h3>
             <span>{dndState.race.ability_bonuses}</span>
           </S.WrapperRaceGeneric>
 

@@ -6,6 +6,7 @@ export const DnDContext = createContext({
   race: {},
   proficiencies: [],
   traits: [],
+  allRaces: [],
 });
 
 const DnDProvider = ({ children }) => {
@@ -90,11 +91,22 @@ const DnDProvider = ({ children }) => {
     });
   };
 
+  const getAllRaces = () => {
+    api.get(`races`).then(({ data }) =>{
+      console.log("data "+ JSON.stringify(data));
+      setDndState((prevState) =>({
+        ...prevState,
+        allRaces: data,
+      }));
+    });
+  };
+
   const contextValue = {
     dndState,
     getRace: useCallback((race) => getRace(race), []),
     getRaceProficiencies: useCallback((race) => getRaceProficiencies(race), []),
     getRaceTraits: useCallback((race) => getRaceTraits(race), []),
+    getAllRaces: useCallback(() => getAllRaces(), []),
   };
 
   return (
