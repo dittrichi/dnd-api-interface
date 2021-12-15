@@ -1,7 +1,7 @@
 import React from "react";
 import Layout  from "./components/races/layout";
 import NoSearch from "./components/races/no-search";
-import RaceProfile from "./components/races/profile";
+import RaceProfile from "./components/races/race-profile";
 import RaceDetails from "./components/races/race-details";
 import useDnd from "./hooks/dnd-hooks";
 

@@ -5,8 +5,8 @@ import * as S from "./styled";
 const RaceProfile = () => {
   const { dndState } = useDnd();
 
-  return (
-    <S.Wrapper>
+  return (    
+    <S.Wrapper>    
       <S.WrapperInfoRace>
         <div>
           <h1>{dndState.race.name}</h1>
@@ -18,12 +18,20 @@ const RaceProfile = () => {
           <S.WrapperRaceGeneric>
             <h3>Speed:</h3>
             <span>{dndState.race.speed}</span>
-          </S.WrapperRaceGeneric>
+          </S.WrapperRaceGeneric>          
 
-          <S.WrapperRaceGeneric>
-            <h3>Ability bonuses:</h3>
-            <span>{dndState.race.ability_bonuses}</span>
-          </S.WrapperRaceGeneric>
+        <S.WrapperRaceGeneric>
+        <h3>Ability bonuses:</h3>
+        <S.WrapperList>
+          <ul>
+          {dndState.race.ability_bonuses.map((item) => (
+                  <li>
+                    {item.ability_score.name} +{item.bonus}
+                  </li>
+                ))}
+          </ul>
+        </S.WrapperList>
+        </S.WrapperRaceGeneric>          
 
           <S.WrapperRaceGeneric>
             <h3>Alignment:</h3>

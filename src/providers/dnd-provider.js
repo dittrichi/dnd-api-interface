@@ -41,7 +41,7 @@ const DnDProvider = ({ children }) => {
 
     api
       .get(`races/${race}`)
-      .then(({ data }) => {
+      .then(({ data }) => {console.log("race data: " + JSON.stringify(data));
         setDndState((prevState) => ({
           ...prevState,
           hasRace: true,
@@ -49,16 +49,16 @@ const DnDProvider = ({ children }) => {
             index: data.index,
             name: data.name,
             speed: data.speed,
-            ability_bonuses: [],
+            ability_bonuses: data.ability_bonuses,
             alignment: data.alignment,
             age: data.age,
             size: data.size,
             size_description: data.size_description,
-            starting_proficiencies: [],
-            languages: [],
+            starting_proficiencies: data.starting_proficiencies,
+            languages: data.languages,
             language_desc: data.language_desc,
-            traits: [],
-            subraces: [],
+            traits: data.traits,
+            subraces: data.subraces,
             url: data.url,
           },
         }));
@@ -100,13 +100,13 @@ const DnDProvider = ({ children }) => {
       }));
     });
   };
-
+  
   const contextValue = {
     dndState,
     getRace: useCallback((race) => getRace(race), []),
     getRaceProficiencies: useCallback((race) => getRaceProficiencies(race), []),
     getRaceTraits: useCallback((race) => getRaceTraits(race), []),
-    getAllRaces: useCallback(() => getAllRaces(), []),
+    getAllRaces: useCallback(() => getAllRaces(), []),    
   };
 
   return (

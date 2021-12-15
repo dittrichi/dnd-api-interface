@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <header>    
         <S.Wrapper>
-          <RaceSelect onChange={(event) => setRaceForSearch(event.currentTarget.value)}/>
+          <RaceSelect onChange={(event) => setRaceForSearch(event.currentTarget.value) }/>
           <button type="submit" onClick={submitGetRace}>
             <span>Search</span>
           </button>

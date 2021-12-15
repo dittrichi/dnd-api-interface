@@ -59,3 +59,9 @@ export const WrapperImage = styled.img`
   width: 200px;
   margin: 8px;
 `;
+
+export const WrapperList = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+`;

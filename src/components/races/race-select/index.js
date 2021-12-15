@@ -14,14 +14,16 @@ const RacesSelect = ({onChange}) => {
     }
     setHasAllRaces(dndState.allRaces);    
     console.log("hasAllRaces: ", hasAllRaces);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dndState.allRaces]);
 
   return (
     <>
       {hasAllRaces ? (
         <S.Wrapper>
-            <select onChange={onChange}>            
+            <select onChange={onChange} >
+            <option selected disabled>
+              Choose one
+            </option>
             {dndState.allRaces.results.map(({index, name}) => (
                 <option key={index} value={index}>{name}</option>
               ))}
