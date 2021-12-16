@@ -1,10 +1,14 @@
 import styled from "styled-components";
 import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
 
-export const WrapperTabs = styled(Tabs)`
-  font-size: 16px;
-  width: 100%;
-  margin-top: 16px;
+export const WrapperTabs = styled(Tabs)`    
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 100px 50px;  
+    justify-content: top-center; 
 `;
 
 export const WrapperTabList = styled(TabList)`

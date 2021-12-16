@@ -9,12 +9,7 @@ const RaceProfile = () => {
     <S.Wrapper>    
       <S.WrapperInfoRace>
         <div>
-          <h1>{dndState.race.name}</h1>
-          <S.WrapperRaceGeneric>
-            <h3>Race:</h3>
-            <spam>{dndState.race.index}</spam>
-          </S.WrapperRaceGeneric>
-
+          <center><h1>{dndState.race.name}</h1></center>
           <S.WrapperRaceGeneric>
             <h3>Speed:</h3>
             <span>{dndState.race.speed}</span>

@@ -8,12 +8,13 @@ export const Wrapper = styled.div`
   width: 350px;
   height: 150px;
   align-content: center;
+  text-align: center;
 `;
 
 export const WrapperTitle = styled.h2`
   font-size: 18px;
-  font-weight: bold;
-  margin: 8px 0;
+  font-weight: bold;  
+  margin: 8px 0;  
 `;
 
 export const WrapperFullName = styled.h2`

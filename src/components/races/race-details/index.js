@@ -1,22 +1,10 @@
-//import React, { useEffect, useState } from "react";
 import useDnd from "../../../hooks/dnd-hooks";
 import RaceDetailItem from "../race-detail-item";
 import * as S from "./styled";
 
 const RaceDetails = () => {
   const { dndState } = useDnd();
-  /* const [hasRaceForSearchProf, setHasRaceForSearchProf] = useState(false);
-
-  useEffect(() => {
-    if (dndState.race.index) {
-      getRaceProficiencies(dndState.race.index);
-      getRaceTraits(dndState.race.index);
-    }
-    setHasRaceForSearchProf(dndState.proficiencies); 
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dndState.race.index]);*/
-
+ 
   return (
     <>
       {dndState.race ? (
